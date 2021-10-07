@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Tiger Strike`,
+    description: `Alternative rock with a punk-reggae twist from Central VT`,
+    author: `Tiger Strike`,
+    siteUrl: `https://www.tigerstrikevt.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

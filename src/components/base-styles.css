@@ -1,4 +1,20 @@
+:root {
+  --dark: #000;
+  --light: #eee;
+  --text-primary: var(--light);
+}
+
 body {
-  background-color: #222;
-  color: #eee;
+  background-color: var(--dark);
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--text-primary);
+}
+
+.centered-column {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
