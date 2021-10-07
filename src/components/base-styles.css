@@ -19,3 +19,7 @@ a {
   flex-flow: column;
   align-items: center;
 }
+
+.no-bullets {
+  list-style: none;
+}

@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => (
     <nav>
       <ul className='nav-link-container'>
         {navLinks.map(({ title, url, isExternalLink }) => (
-          <li>
+          <li key={url}>
             {isExternalLink ? (
               <a className='nav-link' href={url} target='_blank' rel='noopener noreferrer'>
                 {title}
