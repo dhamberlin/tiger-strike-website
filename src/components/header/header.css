@@ -7,6 +7,11 @@
 .title-link {
   text-decoration: none;
   color: var(--dark);
+  transition: color .4s;
+}
+
+.title-link:hover {
+  color: var(--orange);
 }
 
 .header-title-container {
@@ -38,6 +43,6 @@
   transition: opacity .4s;
 }
 
-.nav-link:hover, .nav-link.current-page {
+.nav-link:hover {
   opacity: 1;
 }

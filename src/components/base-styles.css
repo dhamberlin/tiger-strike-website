@@ -1,6 +1,7 @@
 :root {
   --dark: #000;
   --light: #eee;
+  --orange: #f9931f;
   --text-primary: var(--light);
 }
 
