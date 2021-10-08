@@ -32,37 +32,43 @@ const isActive = ({ isCurrent }) => {
   return isCurrent ? { style: { opacity: 1 } } : {}
 }
 
-const Header = ({ siteTitle }) => (
-  <header
-  className='header-container'>
-    <div className='header-title-container'>
-      <h1>
-        <Link to="/" className='title-link'>
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-
-    <nav>
-      <ul className='nav-link-container'>
-        {navLinks.map(({ title, url, isExternalLink }) => (
-          <li key={url}>
-            {isExternalLink ? (
-              <a className='nav-link' href={url} target='_blank' rel='noopener noreferrer'>
+const Header = ({ siteTitle }) => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  return (
+    <header
+    className='header-container'>
+      <div className='header-title-container'>
+        <h1>
+          <Link to="/" className='title-link'>
+            {siteTitle}
+          </Link>
+        </h1>
+      </div>
+  
+      <nav>
+        <ul className={`nav-link-container${isMenuOpen ? ' menu-open' : ''}`}>
+          {navLinks.map(({ title, url, isExternalLink }) => (
+            <li key={url}>
+              {isExternalLink ? (
+                <a className='nav-link' href={url} target='_blank' rel='noopener noreferrer'>
+                  {title}
+                </a>
+              ) : (
+              <Link className={'nav-link'} to={url} getProps={isActive}>
                 {title}
-              </a>
-            ) : (
-            <Link className={'nav-link'} to={url} getProps={isActive}>
-              {title}
-            </Link>
-            )}
-          </li>
-        ))}
-      </ul>
-    </nav>
+              </Link>
+              )}
+            </li>
+          ))}
+        </ul>
+      </nav>
+  
+      <button className='hamburger' onClick={() => setIsMenuOpen(!isMenuOpen)}>&#9776;</button>
+  
+    </header>
+  )
+}
 
-  </header>
-)
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
