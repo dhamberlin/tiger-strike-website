@@ -7,7 +7,7 @@
   color: var(--dark);
   margin-bottom: 1.5rem;
   transition: all .5s;
-  z-index: 10;
+  z-index: 110;
 }
 
 .title-link {
@@ -61,13 +61,25 @@
 @media screen and (max-width: 700px) {
   .header-container {
     height: var(--mobile-nav-bar-height);
+    position: fixed;
+    width: 100%;
+  }
+
+  main {
+    padding-top: calc(var(--mobile-nav-bar-height) + 1.5rem);
+  }
+
+  .header-container::before {
+    display: block;
+    position: static;
+    height: 100%;
   }
 
   .nav-link-container {
     position: absolute;
     background-color: var(--light);
     width: 100%;
-    z-index: 2;
+    z-index: 102;
     margin: 0;
     opacity: 0;
     height: 0;
@@ -97,8 +109,13 @@
   .hamburger {
     position: absolute;
     display: block;
-    z-index: 10;
+    z-index: 110;
     top: 0;
     left: 0;
+    line-height: 1rem;
+    padding: calc((var(--mobile-nav-bar-height) - 1rem) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
