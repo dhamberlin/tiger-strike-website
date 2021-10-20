@@ -1,5 +1,5 @@
 import crypto from "crypto"
-import { ApiClient, PaymentsApi } from "square-connect"
+import { ApiClient, PaymentsApi } from "square"
 
 const headers = {
   "Access-Control-Allow-Origin": "*",
