@@ -65,7 +65,7 @@ export default class PaymentForm extends Component {
   componentDidMount() {
     const config = {
       applicationId: process.env.GATSBY_SQ_APPLICATION_ID,
-      locationId: "GMT96A77XABR1",
+      locationId: process.env.GATSBY_SQ_LOCATION_ID,
       inputClass: "sq-input",
       autoBuild: false,
       inputStyles: [
